@@ -18,6 +18,7 @@ public class Directory {
     HashMap<String, String> hm = new HashMap<>();
 
     public void add(String number, String surname) {
+
         hm.put(number, surname);
     }
 
