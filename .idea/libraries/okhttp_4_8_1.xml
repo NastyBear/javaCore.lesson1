@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="okhttp-4.8.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/okhttp-4.8.1.jar!/" />
+      <root url="file://$USER_HOME$/Downloads/Telegram Desktop/jars" />
+      <root url="file://$USER_HOME$/Downloads/Telegram Desktop/jars" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$USER_HOME$/Downloads/Telegram Desktop/jars" recursive="false" />
+  </library>
+</component>
