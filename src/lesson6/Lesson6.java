@@ -1,6 +1,9 @@
 package lesson6;
 
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -21,7 +24,6 @@ public class Lesson6 {
                 .addQueryParameter("lat","59.56")
                 .addQueryParameter("lon","30.18")
                 .addQueryParameter("limit","5")
-
                 .build();
 
         Request request = new Request.Builder()
@@ -31,8 +33,16 @@ public class Lesson6 {
         Response response = client.newCall(request).execute();
 
       String  jsonResponse = client.newCall(request).execute().body().string();
-        System.out.println(response.code());
         System.out.println(jsonResponse);
 
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
+
+
+        WeatherResponse example = mapper.readValue(jsonResponse, WeatherResponse.class);
+        System.out.println(example);
+
     }
+
+
 }
