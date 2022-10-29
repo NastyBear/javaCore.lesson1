@@ -4,7 +4,6 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class Student {
-  //  public static ArrayList<Student> students = new ArrayList<>();
     public enum Course{
         ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN;
     }
@@ -33,13 +32,6 @@ public class Student {
         this.courses = courses;
     }
 
-    public static void enumCourse(){
-        Random random=new Random();
-        List<Course> enumCollection = Arrays.asList(Course.values());
-        for (Course course:enumCollection){
-            System.out.println(course);
-        }
-}
 
     public static void main(String[] args) {
         List<Student>students=new ArrayList<>();
